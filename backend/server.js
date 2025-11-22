@@ -41,9 +41,9 @@ app.use('/api/clue', clueRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Treasure Hunt API is running' });
 });
-
+const db_password="Tawheedtariq"
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/treasure-hunt')
+mongoose.connect(`mongodb+srv://salikrbhat_db_user:${db_password}@cluster0.24kg8qw.mongodb.net/treasure-hunt`)
   .then(() => {
     console.log('✅ MongoDB connected');
   })

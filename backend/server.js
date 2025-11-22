@@ -31,7 +31,7 @@ const io = new Server(httpServer, {
     methods: ["GET", "POST"]
   }
 });
-
+app.set("trust proxy", 1);
 // Middleware
 app.use(cors({
   origin: process.env.FRONTEND_URL || "https://treasurehunt-me.netlify.app",

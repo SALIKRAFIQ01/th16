@@ -26,7 +26,7 @@ const AdminDashboard = () => {
   }, []);
 
   const initializeSocket = () => {
-    const newSocket = io('http://localhost:5000', {
+    const newSocket = io('https://th16.onrender.com', {
       transports: ['websocket']
     });
 

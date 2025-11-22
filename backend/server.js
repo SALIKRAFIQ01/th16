@@ -23,7 +23,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const httpServer = createServer(app);
-
+app.set("trust proxy", 1);
 const io = new Server(httpServer, {
   cors: {
     origin: "*",   

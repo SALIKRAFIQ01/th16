@@ -27,14 +27,14 @@ const httpServer = createServer(app);
 // Socket.io setup
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: process.env.FRONTEND_URL || "https://treasurehunt-me.netlify.app",
     methods: ["GET", "POST"]
   }
 });
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: process.env.FRONTEND_URL || "https://treasurehunt-me.netlify.app",
   credentials: true
 }));
 

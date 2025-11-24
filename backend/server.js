@@ -26,7 +26,8 @@ const httpServer = createServer(app);
 app.set("trust proxy", 1);
 const allowedOrigins = [
   "https://starlit-mooncake-084566.netlify.app",
-  "https://th16.onrender.com"
+  "https://th16.onrender.com",
+  "http://localhost:5173"
 ];
 app.use(cors({
   origin: allowedOrigins,

@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   const fetchUserData = async () => {
     try {
       if (userType === 'team') {
-        const response = await axios.get('/api/team/progress');
+        const response = await axios.get('https://th16.onrender.com/api/team/progress');
         setUser(response.data);
       } else if (userType === 'admin') {
         // Admin data is stored in token, no need to fetch
